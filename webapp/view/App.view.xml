@@ -1,0 +1,28 @@
+<mvc:View controllerName="Santiago.ListEntities.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" showHeader="false">
+					<content>
+						<VBox justifyContent="Center">
+							<items>
+								<HBox justifyContent="Center">
+									<Image src="https://raw.githubusercontent.com/SAP/ui5-tooling/master/docs/images/UI5_logo_wide.png" class="responsive"/>
+								</HBox>
+								<HBox class="responsive" justifyContent="Center">
+									<Input id="InputUsername" type="Text" class="radius" placeholder="username"/>
+								</HBox>
+								<HBox class="responsive" justifyContent="Center">
+									<Input id="InputPassword" type="Password" class="radius" placeholder="password"/>
+								</HBox>
+								<HBox justifyContent="Center">
+									<Button text="Login" press="Login"></Button>
+								</HBox>
+							</items>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,13 @@
+/* Enter your custom styles here */
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.radius > * {
+    border-radius: 18px 18px 18px 18px;
+    -moz-border-radius: 18px 18px 18px 18px;
+    -webkit-border-radius: 18px 18px 18px 18px;
+    /*border: 1px solid black;*/
+}
