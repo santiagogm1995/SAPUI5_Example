@@ -1,0 +1,47 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:model="sap.ui.model" xmlns:l="sap.ui.layout"
+	controllerName="Santiago.ListEntities.controller.List" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<Button icon="sap-icon://menu2" class="sapUiSmallMargin" press="showMenu"/>
+							<ImageContent src="https://raw.githubusercontent.com/SAP/ui5-tooling/master/docs/images/UI5_logo_wide.png" description="Logo" press="press"/>
+							<core:Icon src="sap-icon://customer" size="2rem" press="getUser" class="sapUiSmallMargin" noTabStop="true"/>
+						</items>
+					</FlexBox>
+					<Table id="idProductsTable" inset="false" items="{ path: '/Customers', sorter: { path: 'Status' } }">
+						<columns>
+							<Column>
+								<Text text="CIF"/>
+							</Column>
+							<Column>
+								<Text text="Nombre"/>
+							</Column>
+							<Column>
+								<Text text="Status"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active" press="onPress">
+								<cells>
+									<Text text="{CIF}"/>
+									<Text text="{Name}"/>
+									<ObjectStatus icon="{path: 'Status', formatter: '.formatter.status'}" state="{path: 'Status'}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+				<footer>
+					<OverflowToolbar id="otbFooter">
+						<ToolbarSpacer/>
+						<Button text="Enviar" icon="sap-icon://email" type="Emphasized" press="Enviar"/>
+						<Button text="Crear" icon="sap-icon://add" type="Emphasized" press="Crear"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

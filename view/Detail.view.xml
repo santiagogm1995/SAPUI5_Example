@@ -1,0 +1,46 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	controllerName="Santiago.ListEntities.controller.Detail" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+						<items>
+							<Button icon="sap-icon://close-command-field" press="goBack" class="sapUiSmallMargin"/>
+							<ImageContent src="https://raw.githubusercontent.com/SAP/ui5-tooling/master/docs/images/UI5_logo_wide.png" description="Logo" press="press"/>
+							<core:Icon src="sap-icon://customer" size="2rem" press="getUser" class="sapUiSmallMargin" noTabStop="true"/>
+						</items>
+					</FlexBox>
+					<VBox class="sapUiSmallMargin" alignContent="Start">
+						<f:SimpleForm id="SimpleFormChange480_Trial" editable="true" layout="ResponsiveGridLayout" title="Address" labelSpanXL="4" labelSpanL="4"
+							labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3"
+							columnsL="2" columnsM="1" singleContainerFullSize="false">
+							<f:content>
+								<core:Title text="Información general"/>
+								<Label text="Tomador"/>
+								<Input value="{SupplierName}"/>
+								<Label text="CP"/>
+								<Input value="{SupplierName}">
+									<layoutData>
+										<l:GridData span="XL2 L3 M3 S4"/>
+									</layoutData>
+								</Input>
+								<Label text="Domicilio Social"/>
+								<Input value="{Street}"></Input>
+								<Label text="Actividad"/>
+								<Input value="{SupplierName}"/>
+								<Label text="Asegurados"/>
+								<Input value="{Street}"></Input>
+								<Label text="Asegurador actual"/>
+								<Input value="{Street}"></Input>
+								<Label text="Broker actual"/>
+								<Input value="{Street}"></Input>
+								<core:Title text="Actividad completa de la empresa"/>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
