@@ -1,2 +1,2 @@
-# SAPUI5_OPA5
-Test with OPA5
+# SAPUI5_Example
+Example of an application in SAPUI5
